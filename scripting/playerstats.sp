@@ -4,13 +4,12 @@
 #include <morecolors>
 
 
-
 // ^ tf2_stocks.inc itself includes sdktools.inc and tf2.inc
 
 #pragma semicolon 1
 #pragma newdecls required
 
-#define PLUGIN_VERSION "0.00"
+#define PLUGIN_VERSION "0.02"
 // Definir el máximo de niveles permitidos
 #define MAX_NIVELES 50
 
@@ -190,7 +189,6 @@ WHERE steamid = '%s'"
     0, 0, 0, 0, 0, 0, 0, 0, 0, '%s', 0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)"
 
 
-
 #define SQL_UPDATE_INFO "UPDATE ranks_players SET \
     kills = %d, \
     deaths = %d, \
@@ -240,9 +238,9 @@ WHERE steamid = '%s'"
 
 public Plugin myinfo =
 {
-    name = "TF2 rank / stats ",
-    author = "Gladoncio",
-    description = "Un plugin que registrará las stats y registrará un sistema de niveles",
+    name = "StatsTF2",
+    author = "MiZa_bmdgg",
+    description = "Plugin to display statistics for TRAKTIR [FORK tf2_stats_2025]",
     version = PLUGIN_VERSION,
     url = "https://github.com/gladoncio/tf2_stats_2025"
 };
@@ -379,8 +377,8 @@ public void OnPluginStart()
     LoadTranslations("common.phrases");
     LoadTranslations("playerstats.phrases");
     LoadLevelsConfig();
-    RegConsoleCmd("sm_minivel", Comando_MiNivel, "Muestra tu nivel actual");
-    RegConsoleCmd("sm_niveles", ComandoNiveles, "Muestra los niveles en la consola.");
+    RegConsoleCmd("sm_level", Comando_MiNivel, "Отображает ваш текущий уровень.");
+    RegConsoleCmd("sm_levels", ComandoNiveles, "Показывает уровни.");
     RegAdminCmd("sm_test", Command_PrintMessage, ADMFLAG_GENERIC);
     HookEvent("player_death", OnPlayerDeathEventsStocks);
     HookEvent("player_spawn", Event_PlayerSpawn, EventHookMode_Pre);
@@ -941,7 +939,6 @@ void CreateNewPlayerInDatabase(const char[] steamId, const char[] playerName, co
 	
 	// Formatear la consulta para insertar en la base de datos
 	Format(query, sizeof(query), SQL_PLAYER_NOT_EXISTS, steamId, steamId64, playerName, datetime);
-
 
 
 
