@@ -41,12 +41,12 @@ This plugin is still in beta. Currently ** does not keep all statistics **, howe
 ### Statistics events
 The plugin records the following death and destruction events, assigning points according to the type of event. These points are configurable in plugin configuration files:
 
-- ** Death **: Kills, Deaths and Assistance statistics are recorded. 
-- ** Domination **: If a player kills another with a domination, he registers.
-- ** Personalized death events **: events such as Headshots, Backstabs, burns, suicides, and other special events are included.
+- **Death**: Kills, Deaths and Assistance statistics are recorded. 
+- **Domination**: If a player kills another with a domination, he registers.
+- **Personalized death events**: events such as Headshots, Backstabs, burns, suicides, and other special events are included.
 Personalized events allow you to add special scores for outstanding actions.
-- ** Destruction of objects **: If a player destroys an object or construction, destruction statistics are recorded.
-- ** Rounds won/losses **: The rounds won and lost by the players are recorded.
+- **Destruction of objects**: If a player destroys an object or construction, destruction statistics are recorded.
+- **Rounds won/losses**: The rounds won and lost by the players are recorded.
 
 ### Example of code (death events)
 The plugin manages several types of events, including headshots, backstabs, burns, etc. Here is an example of the code for the death event:
