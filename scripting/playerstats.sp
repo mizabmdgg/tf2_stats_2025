@@ -9,13 +9,13 @@
 #pragma semicolon 1
 #pragma newdecls required
 
-#define PLUGIN_VERSION "0.02"
+#define PLUGIN_VERSION "0.03"
 // Definir el máximo de niveles permitidos
 #define MAX_NIVELES 50
 
 #define MAX_NOMBRE 64  // Definir el tamaño máximo para nombres
-#define PLUGIN_PREFIX 	"{black}[Player Ranks]{violet} " 	// Our chat friendly prefix.
-#define SQL_CREATETABLE_SQLITE "CREATE TABLE IF NOT EXISTS ranks_players ( \
+#define PLUGIN_PREFIX 	"{white}[Player Ranks]{violet} " 	// Our chat friendly prefix.
+#define SQL_CREATETABLE_SQLITE "CREATE TABLE IF NOT EXISTS steamdata ( \
     id INTEGER PRIMARY KEY AUTOINCREMENT, \
     name TEXT, \
     steamid TEXT, \
@@ -59,7 +59,7 @@
 );"
 
 
-#define SQL_CREATETABLE_MYSQL "CREATE TABLE IF NOT EXISTS ranks_players ( \
+#define SQL_CREATETABLE_MYSQL "CREATE TABLE IF NOT EXISTS steamdata ( \
     id INT AUTO_INCREMENT PRIMARY KEY, \
     name VARCHAR(255), \
     steamid VARCHAR(32), \
@@ -138,11 +138,11 @@
     g_ObjectsDestroyed, \
     g_BuildingsDestroyed, \
     g_EventsAssisted \
-FROM ranks_players \
+FROM steamdata \
 WHERE steamid = '%s'"
 
 
-#define SQL_PLAYER_NOT_EXISTS "INSERT INTO ranks_players ( \
+#define SQL_PLAYER_NOT_EXISTS "INSERT INTO steamdata ( \
     steamid, \
     steamid64, \
     name, \
@@ -189,7 +189,7 @@ WHERE steamid = '%s'"
     0, 0, 0, 0, 0, 0, 0, 0, 0, '%s', 0.0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)"
 
 
-#define SQL_UPDATE_INFO "UPDATE ranks_players SET \
+#define SQL_UPDATE_INFO "UPDATE steamdata SET \
     kills = %d, \
     deaths = %d, \
     suicides = %d, \
@@ -229,11 +229,11 @@ WHERE steamid = '%s'"
 
 
 // Consulta para obtener el Top 20
-#define SQL_SELECT_TOP20 "SELECT name, points FROM ranks_players ORDER BY points DESC LIMIT 20"
+#define SQL_SELECT_TOP20 "SELECT name, points FROM steamdata ORDER BY points DESC LIMIT 20"
 
-#define SQL_SELECT_PLAYER_STATS "SELECT kills, deaths, suicides, headshots, level, dominations, play_time_seconds, points, rounds_wins, rounds_lose FROM ranks_players WHERE steamid = '%s'"
+#define SQL_SELECT_PLAYER_STATS "SELECT kills, deaths, suicides, headshots, level, dominations, play_time_seconds, points, rounds_wins, rounds_lose FROM steamdata WHERE steamid = '%s'"
 
-#define SQL_UPDATE_ADMIN_POINTS "UPDATE ranks_players SET points = %d WHERE steamid = '%s'"
+#define SQL_UPDATE_ADMIN_POINTS "UPDATE steamdata SET points = %d WHERE steamid = '%s'"
 
 
 public Plugin myinfo =
@@ -914,7 +914,7 @@ bool CheckIfPlayerExists(const char[] steamId)
 {
     // Aquí se crea la consulta para buscar el jugador en la base de datos
     char query[256];
-    Format(query, sizeof(query), "SELECT id FROM ranks_players WHERE steamid = '%s'", steamId);
+    Format(query, sizeof(query), "SELECT id FROM steamdata WHERE steamid = '%s'", steamId);
 
 	DBResultSet hResult = SQL_Query(g_DB, query);
 	if (hResult == null) {
