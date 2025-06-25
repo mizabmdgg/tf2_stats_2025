@@ -57,40 +57,40 @@ The points associated with each event can be configured in the plugin files. Exa
 ```plaintext
 "steamdata"
 {
-    "Use_HUD" "0" // Disable the HUD for statistics
-    "Pointsg_Playerkills" = "20" // points for killing a player
-    "Pointsg_playerdeaths" = "20" // points to die
-    "Pointsg_playersuicides" = "20" // points for suicide
-    "Pointsg_playerheadshots" = "20" // points by Headshots
-    "Pointsg_playerlevel" = "20" // points per level
-    "Pointsg_dominando" = "20" // points for dominating a player
-    "Pointsg_dominated" = "20" // points for being dominated
-    "Pointsg_assist" = "20" // Points per attendance
-    "PointsG_Roundwins" = "20" // Points to win a round
-    "PointsG_Roundlose" = "20" // Points to lose a round
-    "Backstabevent points" = "20" // points by backstab
-    "PointsBurningevent" = "20" // Points for burn
-    "Pointsuicidevent" = "20" // points for suicide
-    "PointAnthadoukenevent" = "20" // points by Taunt Hadouken
-    "PointsBurningflareevent" = "20" // Points for Flare Burn
-    "PointAventhightNevent" = "20" // points by Tauunt High Noon
-    "PointAuntgrandslamevent" = "20" // points per tant grand slam
-    "Pointspenetratemyteamevent" = "20" // Points to penetrate a member of your team
-    "PointspenetateheadShotevent" = "20" // Points to penetrate with Headshot
-    "Pointlefragevent" = "20" // points by Telefrag
-    "Pointflyingburnevent" = "20" // points to burn in flight
-    "Pointspumpkinbomventvent" = "20" // points per pump pump
-    "Decapitationvent points" = "20" // points for decapitation
-    "PointshotgunrevenGecritevent" = "20" // Points for revenge with shotguns
-    "PointsFishkillevent" = "20" // points per kill with fish
-    "Point SoutantallClassguitarriffeven" = "20" // points per guitar tant
-    "pointskartevent" = "20" // points per kart event
-    "Pointsragonsfuryigniteevent" = "20" // points by Dragons Fury fire
-    "Pointslapkillevent" = "20" // points by Slap Kill
-    "AxtinguishBoosteVevent points" = "20" // Points to turn off with extinguisher
-    "Pointsg_ObjectsDestroyed" = "20" // points for destroying objects
-    "Pointsg_BuildingsDestroyed" = "20" // points for destroying buildings
-    "Pointsg_eventsSSISted" = "20" // Points to attend at events
+    "use_hud" "0"  // Disables HUD for statistics
+    "puntosg_PlayerKills" = "20"  // Points for killing a player
+    "puntosg_PlayerDeaths" = "20"  // Points for dying
+    "puntosg_PlayerSuicides" = "20"  // Points for suicide
+    "puntosg_PlayerHeadshots" = "20"  // Points for headshots
+    "puntosg_PlayerLevel" = "20"  // Points for level
+    "puntosg_dominando" = "20"  // Points for dominating a player
+    "puntosg_dominado" = "20"  // Points for being dominated
+    "puntosg_assist" = "20"  // Points for assist
+    "puntosg_roundWins" = "20"  // Points for winning a round
+    "puntosg_roundLose" = "20"  // Points for losing a round
+    "puntosbackstabEvent" = "20"  // Points for backstab
+    "puntosburningEvent" = "20"  // Points for burning
+    "puntossuicideEvent" = "20"  // Points for suicide
+    "puntostauntHadoukenEvent" = "20"  // Points for Hadouken taunt
+    "puntosburningFlareEvent" = "20"  // Points for flare burning
+    "puntostauntHighNoonEvent" = "20"  // Points for High Noon taunt
+    "puntostauntGrandSlamEvent" = "20"  // Points for Grand Slam taunt
+    "puntospenetrateMyTeamEvent" = "20"  // Points for penetrating a teammate
+    "puntospenetrateHeadshotEvent" = "20"  // Points for penetrating headshot
+    "puntostelefragEvent" = "20"  // Points for telefrag
+    "puntosflyingBurnEvent" = "20"  // Points for burning while flying
+    "puntospumpkinBombEvent" = "20"  // Points for pumpkin bomb
+    "puntosdecapitationEvent" = "20"  // Points for decapitation
+    "puntosshotgunRevengeCritEvent" = "20"  // Points for shotgun revenge crit
+    "puntosfishKillEvent" = "20"  // Points for fish kill
+    "puntostauntAllclassGuitarRiffEven" = "20"  // Points for guitar taunt
+    "puntoskartEvent" = "20"  // Points for kart event
+    "puntosdragonsFuryIgniteEvent" = "20"  // Points for Dragon's Fury ignite
+    "puntosslapKillEvent" = "20"  // Points for slap kill
+    "puntosaxtinguishBoosterEvent" = "20"  // Points for extinguisher boost
+    "puntosg_ObjectsDestroyed" = "20"  // Points for destroying objects
+    "puntosg_BuildingsDestroyed" = "20"  // Points for destroying buildings
+    "puntosg_EventsAssisted" = "20"  // Points for assisting in events
 }
 
 ```
