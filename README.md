@@ -1,53 +1,33 @@
 <div align="center">
   <h1><code>tf2_stats_2025</code></h1>
   <p>
-    <strong>Short Description</strong>
-  </p>
-  <p style="margin-bottom: 0.5ex;">
-    <img
-        src="https://img.shields.io/github/downloads/gladoncio/tf2_stats_2023/total"
-    />
-    <img
-        src="https://img.shields.io/github/last-commit/gladoncio/tf2_stats_2023"
-    />
-    <img
-        src="https://img.shields.io/github/issues/gladoncio/tf2_stats_2023"
-    />
-    <img
-        src="https://img.shields.io/github/issues-closed/gladoncio/tf2_stats_2023"
-    />
-    <img
-        src="https://img.shields.io/github/repo-size/gladoncio/tf2_stats_2023"
-    />
-    <img
-        src="https://img.shields.io/github/workflow/status/gladoncio/tf2_stats_2023/Compile%20and%20release"
-    />
+    <strong>Fork of tf2_stats_2025 by gladoncio</strong>
   </p>
 </div>
 
 # TF2 Stats Plugin (Beta)
 
-Este plugin está actualmente en desarrollo. La idea es crear un sistema de estadísticas junto a un sistema de niveles.
+This plugin is currently under development. The idea is to create a statistics system next to a level system.
 
 ## Requirements
-- Sourcemod y Metamod
-- SQLite (por ahora; soporte para MySQL pronto)
+- Sourcemod and Metamod
+- SQLite/MySQL/MariaDB
 
 ## Installation
-1. Descarga la última versión desde la página de releases y descomprímela en tu carpeta de Sourcemod.
+1. Download the latest version from the release page and break it on your sourcemod folder.
 
 ## Configuration
-- Una vez cargado el plugin, puedes modificar las especificaciones en `addons/sourcemod/config/playerstats.cfg`.
-- Para configurar puntos por tipo de mapa, prefijos, etc., puedes editar `addons/sourcemod/config/playerstatsmaps/vsh_.cfg`.
-- Configura los puntos por tipo de evento en `addons/sourcemod/config/playerlevels.cfg`.
-- Para habilitar MySQL, asegúrate de configurar la base de datos en `addons/sourcemod/config/databases.cfg`:
+- Once the plugin is loaded, you can modify the specifications in `addons/sourcemod/config/Playerstats.cfg`.
+- To configure points per type of map, prefixes, etc., you can edit `Addons/Sourcemod/Conf/PlayerstatsMaps/vsh_.cfg`.
+- Configure the points by type of event in `Addons/Sourcemod/Conf/Playerlevels.cfg`.
+- To enable mysql, Be sure to configure the database in `Addons/Sourcemod/Conf/Databases.cfg`:
 
 ```json
 "playerstats"
 {
 	"driver"		"mysql"
 	"host"			"localhost"
-	"database"		"playerstats"
+	"database"		"steamdata"
 	"user"			"root"
 	"pass"			""
 	//"timeout"		"0"
@@ -56,60 +36,61 @@ Este plugin está actualmente en desarrollo. La idea es crear un sistema de esta
 ```
 
 ## Usage (Beta)
-Este plugin aún está en fase beta. Actualmente **no guarda todas las estadísticas**, Sin embargo, representa un gran avance desde la última actualización.
+This plugin is still in beta. Currently ** does not keep all statistics **, however, it represents a great advance since the last update.
 
-### Eventos de Estadísticas
-El plugin registra los siguientes eventos de muerte y destrucción, asignando puntos según el tipo de evento. Estos puntos son configurables en los archivos de configuración del plugin:
+### Statistics events
+The plugin records the following death and destruction events, assigning points according to the type of event. These points are configurable in plugin configuration files:
 
-- **Muerte**: Se registran las estadísticas de kills, deaths y asistencias. 
-- **Dominación**: Si un jugador mata a otro con una dominación, se registra.
-- **Eventos Personalizados de Muerte**: Se incluyen eventos como headshots, backstabs, quemaduras, suicidios, y otros eventos especiales. Los eventos personalizados permiten agregar puntuaciones especiales por acciones destacadas.
-- **Destrucción de Objetos**: Si un jugador destruye un objeto o construcción, se registran las estadísticas de destrucción.
-- **Rondas Ganadas/Perdidas**: Se registran las rondas ganadas y perdidas por los jugadores.
+- ** Death **: Kills, Deaths and Assistance statistics are recorded. 
+- ** Domination **: If a player kills another with a domination, he registers.
+- ** Personalized death events **: events such as Headshots, Backstabs, burns, suicides, and other special events are included.
+Personalized events allow you to add special scores for outstanding actions.
+- ** Destruction of objects **: If a player destroys an object or construction, destruction statistics are recorded.
+- ** Rounds won/losses **: The rounds won and lost by the players are recorded.
 
-### Ejemplo de Código (Eventos de Muerte)
-El plugin maneja varios tipos de eventos, incluyendo headshots, backstabs, quemaduras, etc. Aquí hay un ejemplo del código para el evento de muerte:
+### Example of code (death events)
+The plugin manages several types of events, including headshots, backstabs, burns, etc. Here is an example of the code for the death event:
 
-#### Configuración de Puntos por Evento
-Los puntos asociados con cada evento se pueden configurar en los archivos del plugin. Ejemplo:
+#### Setting points per event
+The points associated with each event can be configured in the plugin files. Example:
 
 ```plaintext
-"playerstats"
+"steamdata"
 {
-    "use_hud" "0"  // Desactiva el HUD para las estadísticas
-    "puntosg_PlayerKills" = "20"  // Puntos por matar a un jugador
-    "puntosg_PlayerDeaths" = "20"  // Puntos por morir
-    "puntosg_PlayerSuicides" = "20"  // Puntos por suicidio
-    "puntosg_PlayerHeadshots" = "20"  // Puntos por headshots
-    "puntosg_PlayerLevel" = "20"  // Puntos por nivel
-    "puntosg_dominando" = "20"  // Puntos por dominar a un jugador
-    "puntosg_dominado" = "20"  // Puntos por ser dominado
-    "puntosg_assist" = "20"  // Puntos por asistencia
-    "puntosg_roundWins" = "20"  // Puntos por ganar una ronda
-    "puntosg_roundLose" = "20"  // Puntos por perder una ronda
-    "puntosbackstabEvent" = "20"  // Puntos por backstab
-    "puntosburningEvent" = "20"  // Puntos por quemadura
-    "puntossuicideEvent" = "20"  // Puntos por suicidio
-    "puntostauntHadoukenEvent" = "20"  // Puntos por taunt Hadouken
-    "puntosburningFlareEvent" = "20"  // Puntos por quemadura con flare
-    "puntostauntHighNoonEvent" = "20"  // Puntos por taunt High Noon
-    "puntostauntGrandSlamEvent" = "20"  // Puntos por taunt Grand Slam
-    "puntospenetrateMyTeamEvent" = "20"  // Puntos por penetrar a un miembro de tu equipo
-    "puntospenetrateHeadshotEvent" = "20"  // Puntos por penetrar con headshot
-    "puntostelefragEvent" = "20"  // Puntos por telefrag
-    "puntosflyingBurnEvent" = "20"  // Puntos por quemar en vuelo
-    "puntospumpkinBombEvent" = "20"  // Puntos por bomba calabaza
-    "puntosdecapitationEvent" = "20"  // Puntos por decapitación
-    "puntosshotgunRevengeCritEvent" = "20"  // Puntos por venganza con escopeta
-    "puntosfishKillEvent" = "20"  // Puntos por kill con fish
-    "puntostauntAllclassGuitarRiffEven" = "20"  // Puntos por taunt de guitarra
-    "puntoskartEvent" = "20"  // Puntos por evento de kart
-    "puntosdragonsFuryIgniteEvent" = "20"  // Puntos por fuego de Dragons Fury
-    "puntosslapKillEvent" = "20"  // Puntos por slap kill
-    "puntosaxtinguishBoosterEvent" = "20"  // Puntos por apagar con extintor
-    "puntosg_ObjectsDestroyed" = "20"  // Puntos por destruir objetos
-    "puntosg_BuildingsDestroyed" = "20"  // Puntos por destruir edificaciones
-    "puntosg_EventsAssisted" = "20"  // Puntos por asistir en eventos
+    "Use_HUD" "0" // Disable the HUD for statistics
+    "Pointsg_Playerkills" = "20" // points for killing a player
+    "Pointsg_playerdeaths" = "20" // points to die
+    "Pointsg_playersuicides" = "20" // points for suicide
+    "Pointsg_playerheadshots" = "20" // points by Headshots
+    "Pointsg_playerlevel" = "20" // points per level
+    "Pointsg_dominando" = "20" // points for dominating a player
+    "Pointsg_dominated" = "20" // points for being dominated
+    "Pointsg_assist" = "20" // Points per attendance
+    "PointsG_Roundwins" = "20" // Points to win a round
+    "PointsG_Roundlose" = "20" // Points to lose a round
+    "Backstabevent points" = "20" // points by backstab
+    "PointsBurningevent" = "20" // Points for burn
+    "Pointsuicidevent" = "20" // points for suicide
+    "PointAnthadoukenevent" = "20" // points by Taunt Hadouken
+    "PointsBurningflareevent" = "20" // Points for Flare Burn
+    "PointAventhightNevent" = "20" // points by Tauunt High Noon
+    "PointAuntgrandslamevent" = "20" // points per tant grand slam
+    "Pointspenetratemyteamevent" = "20" // Points to penetrate a member of your team
+    "PointspenetateheadShotevent" = "20" // Points to penetrate with Headshot
+    "Pointlefragevent" = "20" // points by Telefrag
+    "Pointflyingburnevent" = "20" // points to burn in flight
+    "Pointspumpkinbomventvent" = "20" // points per pump pump
+    "Decapitationvent points" = "20" // points for decapitation
+    "PointshotgunrevenGecritevent" = "20" // Points for revenge with shotguns
+    "PointsFishkillevent" = "20" // points per kill with fish
+    "Point SoutantallClassguitarriffeven" = "20" // points per guitar tant
+    "pointskartevent" = "20" // points per kart event
+    "Pointsragonsfuryigniteevent" = "20" // points by Dragons Fury fire
+    "Pointslapkillevent" = "20" // points by Slap Kill
+    "AxtinguishBoosteVevent points" = "20" // Points to turn off with extinguisher
+    "Pointsg_ObjectsDestroyed" = "20" // points for destroying objects
+    "Pointsg_BuildingsDestroyed" = "20" // points for destroying buildings
+    "Pointsg_eventsSSISted" = "20" // Points to attend at events
 }
 
 ```
