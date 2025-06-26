@@ -5,11 +5,15 @@
         "#format"   "{1:s}"
         "es"        "{violet} Jugador conectado: {1}"
         "en"        "{violet} Player connected: {1}"
+        "ru"        "{violet} Игрок подключился: {1}"
+        "ua"        "{violet} Гравець підключився: {1}"
     }
     "player_invalid"
     {
         "es"        "{violet} Jugador conectado: (SteamID no disponible)"
         "en"        "{violet} Player connected: (SteamID not available)"
+        "ru"        "{violet} Игрок подключился: (SteamID недоступен)"
+        "ua"        "{violet} Гравець підключився: (SteamID недоступний)"
     }
 
     "player_connect"
@@ -17,12 +21,16 @@
         "#format"   "{1:s},{2:s}"
         "es"        "{violet} Jugador conectado: {1} (SteamID: {2})"
         "en"        "{violet} Player connected: {1} (SteamID: {2})"
+        "ru"        "{violet} Игрок подключился: {1} (SteamID: {2})"
+        "ua"        "{violet} Гравець підключився: {1} (SteamID: {2})"
     }
 
     "menu_title"
     {
         "es"        "Estadísticas de Jugador"
         "en"        "Player Statistics"
+        "ru"        "Статистика игрока"
+        "ua"        "Статистика гравця"
     }
 
     "menu_points"
@@ -30,6 +38,8 @@
         "#format"   "{1:d}"
         "es"        "Puntos: {1}"
         "en"        "Points: {1}"
+        "ru"        "Очки: {1}"
+        "ua"        "Очки: {1}"
     }
 
     "menu_playtime_hours"
@@ -37,6 +47,8 @@
         "#format"   "{1:.2f}"
         "es"        "Tiempo Jugado: {1} horas"
         "en"        "Playtime: {1} hours"
+        "ru"        "Время игры: {1} часов"
+        "ua"        "Час гри: {1} годин"
     }
 
     "menu_playtime_minutes"
@@ -44,6 +56,8 @@
         "#format"   "{1:.2f}"
         "es"        "Tiempo Jugado: {1} minutos"
         "en"        "Playtime: {1} minutes"
+        "ru"        "Время игры: {1} минут"
+        "ua"        "Час гри: {1} хвилин"
     }
 
     "menu_kills"
@@ -51,6 +65,8 @@
         "#format"   "{1:d}"
         "es"        "Kills: {1}"
         "en"        "Kills: {1}"
+        "ru"        "Убийства: {1}"
+        "ua"        "Вбивства: {1}"
     }
 
     "menu_deaths"
@@ -58,6 +74,8 @@
         "#format"   "{1:d}"
         "es"        "Muertes: {1}"
         "en"        "Deaths: {1}"
+        "ru"        "Смерти: {1}"
+        "ua"        "Смерті: {1}"
     }
 
     "menu_suicides"
@@ -65,6 +83,8 @@
         "#format"   "{1:d}"
         "es"        "Suicidios: {1}"
         "en"        "Suicides: {1}"
+        "ru"        "Самоубийства: {1}"
+        "ua"        "Самогубства: {1}"
     }
 
     "menu_headshots"
@@ -72,6 +92,8 @@
         "#format"   "{1:d}"
         "es"        "Headshots: {1}"
         "en"        "Headshots: {1}"
+        "ru"        "Выстрелы в голову: {1}"
+        "ua"        "Постріли в голову: {1}"
     }
 
     "menu_level"
@@ -79,6 +101,8 @@
         "#format"   "{1:d}"
         "es"        "Nivel: {1}"
         "en"        "Level: {1}"
+        "ru"        "Уровень: {1}"
+        "ua"        "Рівень: {1}"
     }
 
     "menu_dominations"
@@ -86,6 +110,8 @@
         "#format"   "{1:d}"
         "es"        "Dominaciones: {1}"
         "en"        "Dominations: {1}"
+        "ru"        "Доминирования: {1}"
+        "ua"        "Домінування: {1}"
     }
 
     "menu_rounds_won"
@@ -93,6 +119,8 @@
         "#format"   "{1:d}"
         "es"        "Rondas Ganadas: {1}"
         "en"        "Rounds Won: {1}"
+        "ru"        "Раундов выиграно: {1}"
+        "ua"        "Раундів виграно: {1}"
     }
 
     "menu_rounds_lost"
@@ -100,204 +128,274 @@
         "#format"   "{1:d}"
         "es"        "Rondas Perdidas: {1}"
         "en"        "Rounds Lost: {1}"
+        "ru"        "Раундов проиграно: {1}"
+        "ua"        "Раундів програно: {1}"
     }
     "command_not_admin"
     {
         "es"        "{black}[Error] {violet}No tienes permisos para usar este comando."
         "en"        "{black}[Error] {violet}You do not have permission to use this command."
+        "ru"        "{black}[Ошибка] {violet}У вас нет прав для использования этой команды."
+        "ua"        "{black}[Помилка] {violet}У вас немає прав для використання цієї команди."
     }
     "setpoints_usage"
     {
         "es"        "{black}[Uso] {violet}!setpoints <{lawngreen}usuario{violet}> <{lawngreen}puntos{violet}>."
         "en"        "{black}[Usage] {violet}!setpoints <{lawngreen}user{violet}> <{lawngreen}points{violet}>."
+        "ru"        "{black}[Использование] {violet}!setpoints <{lawngreen}игрок{violet}> <{lawngreen}очки{violet}>."
+        "ua"        "{black}[Використання] {violet}!setpoints <{lawngreen}гравець{violet}> <{lawngreen}очки{violet}>."
     }
     "negative_points"
     {
         "es"        "{black}[Error] {violet} Los puntos no pueden ser negativos."
         "en"        "{black}[Error] {violet}Points cannot be negative."
+        "ru"        "{black}[Ошибка] {violet}Очки не могут быть отрицательными."
+        "ua"        "{black}[Помилка] {violet}Очки не можуть бути від'ємними."
     }
     "player_not_found"
     {
         "es"        "{black}[Error] {violet}Jugador no encontrado."
         "en"        "{black}[Error] {violet}Player not found."
+        "ru"        "{black}[Ошибка] {violet}Игрок не найден."
+        "ua"        "{black}[Помилка] {violet}Гравця не знайдено."
     }
     "points_ok"
     {
         "#format"   "{1:N},{2:d}"
         "es"        "{black}[Éxito] {violet}Se han actualizado los puntos de {black}{1} {violet}a {black}{2}."
         "en"        "{black}[Success] {lawngreen}{1}{black}'s {violet} points have been updated to {black}{2}."
+        "ru"        "{black}[Успех] {violet}Очки игрока {black}{1} {violet}обновлены до {black}{2}."
+        "ua"        "{black}[Успіх] {violet}Очки гравця {black}{1} {violet}оновлено до {black}{2}."
     }
     "points_bad"
     {
         "es"        "{black}[Error] {violet}No se pudo actualizar los puntos."
         "en"        "{black}[Error] {violet} Could not update points."
+        "ru"        "{black}[Ошибка] {violet}Не удалось обновить очки."
+        "ua"        "{black}[Помилка] {violet}Не вдалося оновити очки."
     }
     "headshot"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} hizo un headshot a {2}!"
         "en"        "{1} scored a headshot on {2}!"
+        "ru"        "{1} попал в голову {2}!"
+        "ua"        "{1} влучив в голову {2}!"
     }
     "backstabs"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} apuñaló por la espalda a {2}!"
         "en"        "{1} backstabbed {2}!"
+        "ru"        "{1} зарезал в спину {2}!"
+        "ua"        "{1} вдарив ножем у спину {2}!"
     }
     "burning"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} quemó a {2} con fuego!"
         "en"        "{1} burned {2} with fire!"
+        "ru"        "{1} сжег {2} огнем!"
+        "ua"        "{1} спалив {2} вогнем!"
     }
     "Suicides"
     {
         "#format"   "{1:N}"
         "es"        "¡{1} se suicidó!"
         "en"        "{1} committed suicide!"
+        "ru"        "{1} покончил с собой!"
+        "ua"        "{1} покінчив з собою!"
     }
     "Hadouken"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con un Hadouken!"
         "en"        "{1} killed {2} with a Hadouken!"
+        "ru"        "{1} убил {2} с помощью Хадукена!"
+        "ua"        "{1} вбив {2} за допомогою Хадукена!"
     }
     "burningFlareEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} quemó a {2} con una flecha incendiaria!"
         "en"        "{1} burned {2} with a flaming arrow!"
+        "ru"        "{1} сжег {2} зажигательной стрелой!"
+        "ua"        "{1} спалив {2} запалювальною стрілою!"
     }
     "kill_not_event"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2}"
         "en"        "{1} killed {2}"
+        "ru"        "{1} убил {2}"
+        "ua"        "{1} вбив {2}"
     }
     "tauntHighNoonEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con su taunt High Noon!"
         "en"        "{1} killed {2} with their High Noon taunt!"
+        "ru"        "{1} убил {2} провокацией Полдень!"
+        "ua"        "{1} вбив {2} провокацією Полудень!"
     }
     "slam"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} hizo un Grand Slam con taunt contra {2}!"
         "en"        "{1} performed a Grand Slam taunt against {2}!"
+        "ru"        "{1} выполнил провокацию Гранд Слэм против {2}!"
+        "ua"        "{1} виконав провокацію Гранд Слем проти {2}!"
     }
     "penetrateMyTeamEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} disparó a través de su propio equipo y mató a {2}!"
         "en"        "{1} shot through their own team and killed {2}!"
+        "ru"        "{1} выстрелил через свою команду и убил {2}!"
+        "ua"        "{1} вистрілив через свою команду і вбив {2}!"
     }
     "penetrateHeadshotEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} hizo un headshot penetrante a través de las líneas enemigas, matando a {2}!"
         "en"        "{1} landed a penetrating headshot through enemy lines, killing {2}!"
+        "ru"        "{1} пробил головной выстрел через вражеские линии, убив {2}!"
+        "ua"        "{1} пробив головний постріл через ворожі лінії, вбивши {2}!"
     }
     "telefragEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con un telefrag!"
         "en"        "{1} telefragged {2}!"
+        "ru"        "{1} телефрагнул {2}!"
+        "ua"        "{1} телефрагнув {2}!"
     }
     "flyingBurnEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} quemó a {2} mientras volaba!"
         "en"        "{1} burned {2} while flying!"
+        "ru"        "{1} сжег {2} в полете!"
+        "ua"        "{1} спалив {2} під час польоту!"
     }
     "pumpkinBombEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con una bomba de calabaza!"
         "en"        "{1} killed {2} with a pumpkin bomb!"
+        "ru"        "{1} убил {2} тыквенной бомбой!"
+        "ua"        "{1} вбив {2} гарбузовою бомбою!"
     }
     "decapitationEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} decapitó a {2}!"
         "en"        "{1} decapitated {2}!"
+        "ru"        "{1} обезглавил {2}!"
+        "ua"        "{1} обезголовив {2}!"
     }
     "shotgunRevengeCritEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} se vengó y mató a {2} con un disparo crítico de escopeta!"
         "en"        "{1} took revenge and killed {2} with a critical shotgun blast!"
+        "ru"        "{1} отомстил и убил {2} критическим выстрелом из дробовика!"
+        "ua"        "{1} помстився і вбив {2} критичним пострілом з рушниці!"
     }
     "fishKillEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con un pez!"
         "en"        "{1} killed {2} with a fish!"
+        "ru"        "{1} убил {2} рыбой!"
+        "ua"        "{1} вбив {2} рибою!"
     }
     "tauntAllclassGuitarRiffEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con una guitarra en su taunt de todas las clases!"
         "en"        "{1} killed {2} with a guitar riff from their all-class taunt!"
+        "ru"        "{1} убил {2} гитарным риффом из общеклассовой провокации!"
+        "ua"        "{1} вбив {2} гітарним риффом із загальнокласової провокації!"
     }
     "kartEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} atropelló a {2} con un Kart!"
         "en"        "{1} ran over {2} with a Kart!"
+        "ru"        "{1} переехал {2} на карте!"
+        "ua"        "{1} переїхав {2} на карті!"
     }
     "dragonsFuryIgniteEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con un ataque de fuego de Dragon's Fury!"
         "en"        "{1} killed {2} with a Dragon's Fury fire attack!"
+        "ru"        "{1} убил {2} огненной атакой Ярости Дракона!"
+        "ua"        "{1} вбив {2} вогняною атакою Ярості Дракона!"
     }
     "slapKillEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con una bofetada!"
         "en"        "{1} killed {2} with a slap!"
+        "ru"        "{1} убил {2} пощечиной!"
+        "ua"        "{1} вбив {2} ляпасом!"
     }
     "axtinguishBoosterEvent"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} mató a {2} con un extintor mejorado!"
         "en"        "{1} killed {2} with an upgraded extinguisher!"
+        "ru"        "{1} убил {2} улучшенным огнетушителем!"
+        "ua"        "{1} вбив {2} покращеним вогнегасником!"
     }
     "g_dominando"
     {
         "#format"   "{1:N},{2:N}"
         "es"        "¡{1} dominó a {2}!"
         "en"        "{1} dominated {2}!"
+        "ru"        "{1} доминирует над {2}!"
+        "ua"        "{1} домінує над {2}!"
     }
     "g_BuildingsDestroyed"
     {
         "#format"   "{1:N},{2:N},{3:s}"
         "es"        "¡{1} destruyó una construcción de {2} con {3}!"
         "en"        "{1} destroyed a building of {2} with {3}!"
+        "ru"        "{1} уничтожил постройку {2} с помощью {3}!"
+        "ua"        "{1} знищив будівлю {2} за допомогою {3}!"
     }
     "g_ObjectsDestroyed"
     {
         "#format"   "{1:N},{2:N},{3:s}"
         "es"        "¡{1} destruyó un objeto de {2} con {3}!"
         "en"        "{1} destroyed an object of {2} with {3}!"
+        "ru"        "{1} уничтожил объект {2} с помощью {3}!"
+        "ua"        "{1} знищив об'єкт {2} за допомогою {3}!"
     }
     "mylevelnotPlayer"
     {
         "es"        "Este comando solo puede ser usado por jugadores en el juego."
         "en"        "This command can only be used by players in the game."
+        "ru"        "Эта команда может быть использована только игроками в игре."
+        "ua"        "Ця команда може бути використана тільки гравцями в грі."
     }
     "mylevelcommand"
     {
         "#format"   "{1:d},{2:s}"
         "es"        "Tu nivel actual es: {1} ({2})"
         "en"        "Your current level is: {1} ({2})"
+        "ru"        "Ваш текущий уровень: {1} ({2})"
+        "ua"        "Ваш поточний рівень: {1} ({2})"
     }
     "Round_Wins"
     {
         "#format"   "{1:s},{2:s}"
         "es"        "{violet} Total de rondas ganadas: {1} puntos ganados: {2}"
         "en"        "{violet} Rounds wins: {1} {2} Points"
+        "ru"        "{violet} Раундов выиграно: {1} получено очков: {2}"
+        "ua"        "{violet} Раундів виграно: {1} отримано очків: {2}"
     }
 
     "Round_Lose"
@@ -305,6 +403,8 @@
         "#format"   "{1:s},{2:s}"
         "es"        "{violet}Total de rondas perdidas: {1} puntos perdidos: {2}"
         "en"        "{violet} Rounds Lose: {1}  {2} Points"
+        "ru"        "{violet} Раундов проиграно: {1} потеряно очков: {2}"
+        "ua"        "{violet} Раундів програно: {1} втрачено очків: {2}"
     }
     
 }
