@@ -1136,8 +1136,8 @@ public void OnClientPutInServer(int client)
     playersdata[client].g_PlayerStartTime = GetClientTime(client); 
 
     // Obtiene el nombre y la SteamID del jugador
-    char playerName[32], steamId[20], steamId64[20];
-
+    char playerName[64], steamId[20], steamId64[20];
+// Кирилица использует 2 байта на символ. по идеи теперь всё гуд
     GetClientName(client, playerName, sizeof(playerName));
 
     if (!GetClientAuthId(client, AuthId_Steam2, steamId, sizeof(steamId), true) ||
