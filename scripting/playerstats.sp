@@ -9,7 +9,7 @@
 #pragma semicolon 1
 #pragma newdecls required
 
-#define PLUGIN_VERSION "0.03"
+#define PLUGIN_VERSION "0.04"
 // Definir el máximo de niveles permitidos
 #define MAX_NIVELES 50
 
@@ -389,6 +389,8 @@ public void OnPluginStart()
     
 
     g_DB = SQL_Connect("playerstats", false, g_DBError, sizeof(g_DBError));
+    
+    SQL_FastQuery(g_DB, "SET NAMES 'utf8mb4'");
 
     if (g_DB == null) {
         PrintToServer("Could not connect to 'playerstats': %s", g_DBError);
@@ -1136,7 +1138,7 @@ public void OnClientPutInServer(int client)
     playersdata[client].g_PlayerStartTime = GetClientTime(client); 
 
     // Obtiene el nombre y la SteamID del jugador
-    char playerName[64], steamId[20], steamId64[20];
+    char playerName[78], steamId[20], steamId64[20];
 // Кирилица использует 2 байта на символ. по идеи теперь всё гуд
     GetClientName(client, playerName, sizeof(playerName));
 
